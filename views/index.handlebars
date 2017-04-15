@@ -1,0 +1,35 @@
+<style media="screen">
+li {
+  height: 100px;
+  width: 100px;
+  color: black;
+  background-color: green;
+
+}
+</style>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 text-center">
+      <img src="/assets/images/tiptuity.svg" alt="tiptuity" />
+      <h1> TIPtuity </h1>
+    </div>
+  </row>
+</div>
+
+<div class="col-sm-6" class="camQR"></div>
+<div class="col-sm-6">
+  <form action="/" method="POST">
+    {{#each Payment Options}}
+      <li>
+        <p> $1 </p>
+        <p> $3 </p>
+        <p> $5 </p>
+        <p> $7 </p>
+        <textarea name="dollar amount" rows="1" cols="1"></textarea>
+
+        <button type="submit">Submit</button>
+      </li>
+    {{/each}}
+  </form>
+</div>
