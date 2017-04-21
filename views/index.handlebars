@@ -1,35 +1,60 @@
-<style media="screen">
-li {
-  height: 100px;
-  width: 100px;
-  color: black;
-  background-color: green;
+    <div class="row">
+      <img src="/assets/images/TiptuityLogo.png" alt="TIPnow">
 
-}
-</style>
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-default btn-lg top-rt" id="myBtn">Login</button>
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 text-center">
-      <img src="/assets/images/tiptuity.svg" alt="tiptuity" />
-      <h1> TIPtuity </h1>
+      <h2>The no cash, tipping solution. Tip a service professional by scanning their QR code now. </h2>
+
+    <div class="container">
+
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header" style="padding:35px 50px;">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+            </div>
+            <div class="modal-body" style="padding:40px 50px;">
+              <form role="form">
+                <div class="form-group">
+                  <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+                  <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                  <input type="text" class="form-control" id="psw" placeholder="Enter password">
+                </div>
+                <div class="checkbox">
+                  <label><input type="checkbox" value="" checked>Remember me</label>
+                </div>
+                  <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+              <p>Not a member? <a href="#">Sign Up</a></p>
+              <p>Forgot <a href="#">Password?</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
-  </row>
-</div>
 
-<div class="col-sm-6" class="camQR"></div>
-<div class="col-sm-6">
-  <form action="/" method="POST">
-    {{#each Payment Options}}
-      <li>
-        <p> $1 </p>
-        <p> $3 </p>
-        <p> $5 </p>
-        <p> $7 </p>
-        <textarea name="dollar amount" rows="1" cols="1"></textarea>
+    <script>
+    $(document).ready(function(){
+        $("#myBtn").click(function(){
+            $("#myModal").modal();
+        });
+    });
+    </script>
 
-        <button type="submit">Submit</button>
-      </li>
-    {{/each}}
-  </form>
-</div>
+    </body>
+    </html>
